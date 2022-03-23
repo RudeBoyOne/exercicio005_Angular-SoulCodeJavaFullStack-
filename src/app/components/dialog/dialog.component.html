@@ -1,0 +1,17 @@
+<div mat-dialog-content>
+  <h2 mat-dialog-title>Olá {{data.nome}} </h2>
+  <h3 mat-dialog-title> Seu cadastro foi realizado com sucesso! </h3>
+  <br>
+  <p>Dados enviados:</p>
+  <mat-list>
+    <mat-list-item>Nome: {{ data.nome }}</mat-list-item>
+    <mat-list-item>Sobrenome: {{ data.sobreNome }}</mat-list-item>
+    <mat-list-item>Username: {{ data.userName }}</mat-list-item>
+    <mat-list-item>CPF: {{ data.cpf }}</mat-list-item>
+    <mat-list-item>Telefone: {{ data.telefone }}</mat-list-item>
+    <mat-list-item>Endereço completo: {{ data.endereco }} {{ data.complemento }}</mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Ok </button>
+</div>

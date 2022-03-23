@@ -1,0 +1,21 @@
+Crie dois formulários com Angular, um Utilizando o 
+
+1. Template Driven Forms 
+
+e outro utilizando o 
+
+2. Reactive Forms. 
+
+OBS: Caso queira, crie uma lógica para adicionar mais números de telefone ao seu formulário.
+OBS2: Utilize o Angular Material	
+Faça a estilização que você deseja em cada um dos formulários.
+
+
+1.1 / 2.1 Os dois formulários devem possuir os campos: nome, sobrenome, username, cpf, telefone, endereço, complemento, dois campos para senha e um botão para enviar o formulário. Template Driven Forms (✅) ; Reactive Forms(✅)
+
+1.2 / 2.2 Nesses campos de senha, você deve fazer uma validação para informar se o valor dos dois campos são iguais. Template Driven Forms (✅) ; Reactive Forms(✅)
+
+
+1.3 / 2.3 Também valide os outros campos da forma que desejar. Template Driven Forms (✅) ; Reactive Forms(✅)
+
+1.4 / 2.4 Se tudo estiver certo nos eu formulário, ao clicar no botão de enviar, você deve mostrar uma caixa de mensagem mostrando os dados que foram adicionados. (Para mostrar a caixa de mensagem com os dados informados, utilize o Dialog, do Angular Material) Template Driven Forms (✅) ; Reactive Forms(✅)

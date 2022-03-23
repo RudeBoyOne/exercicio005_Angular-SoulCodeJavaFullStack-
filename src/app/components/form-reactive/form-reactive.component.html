@@ -1,0 +1,245 @@
+<mat-card>
+    <mat-card-title>Crie seu login:</mat-card-title>
+    <mat-card-content>
+        <form 
+            action="#" 
+            id="form"
+            [formGroup]="cadastroForm"
+            (ngSubmit)="enviaEventoForm()"
+            #formReactive2
+            >
+
+                <div class="wrapper">
+                    <mat-form-field appearance="fill">                    
+                        <mat-label>Nome</mat-label>
+                        <input 
+                            matInput 
+                            type="text" 
+                            name="name"
+                            id="nome" 
+                            placeholder="Digite seu nome"
+                            formControlName="nome"
+                        >
+
+                        <mat-error>
+                            <span *ngIf="cadastroForm.controls['nome'].getError('required')">
+                                Este campo é obrigatório! 
+                            </span>
+                            <span *ngIf="cadastroForm.controls['nome'].getError('minlength')" > 
+                                No mínimo 3 caracteres!
+                            </span>
+                        </mat-error>
+
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Sobrenome</mat-label>
+                        <input
+                        matInput
+                        type="text" 
+                        name="sobreNome"
+                        id="sobreNome"
+                        placeholder="Digite seu sobrenome"
+                        formControlName="sobreNome" 
+                        >
+                        
+                    <mat-error>
+                        <span *ngIf="cadastroForm.controls['sobreNome'].getError('required')">
+                            Este campo é obrigatório! 
+                        </span>
+                        <span *ngIf="cadastroForm.controls['sobreNome'].getError('minlength')" > 
+                            No mínimo 3 caracteres!
+                        </span>
+                    </mat-error>
+
+
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="ocupa">
+                    <mat-label>Nome de usuário</mat-label>
+                    <input
+                    matInput
+                    type="text" 
+                    name="username"
+                    id="username"
+                    placeholder="Digite seu nome username"
+                    formControlName="userName"
+                    >
+
+                    <mat-error>
+                        <span *ngIf="cadastroForm.controls['userName'].getError('required')">
+                            Este campo é obrigatório! 
+                        </span>
+                        <span *ngIf="cadastroForm.controls['userName'].getError('minlength')" > 
+                            No mínimo 6 caracteres!
+                        </span>
+                    </mat-error>
+
+
+                </mat-form-field>
+
+                <div class="wrapper">
+                    <mat-form-field appearance="fill">                    
+                        <mat-label>CPF</mat-label>
+                        <input 
+                            matInput 
+                            type="text" 
+                            name="cpf"
+                            id="cpf" 
+                            placeholder="Ex: 000.000.000-00"
+                            formControlName="cpf"
+                        >
+
+                        <mat-error>
+                            <span *ngIf="cadastroForm.controls['cpf'].getError('required')">
+                                Este campo é obrigatório! 
+                            </span>
+                            <span *ngIf="cadastroForm.controls['cpf'].getError('minlength')" > 
+                                Mínimo 11 números, só números!
+                            </span>
+                        </mat-error>
+    
+    
+
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Telefone</mat-label>
+                        <input 
+                            matInput
+                            type="tel" 
+                            name="telefone" 
+                            id="tel"
+                            placeholder="Ex: 011 0 00000000"
+                            formControlName="telefone"
+                            >
+
+                        <mat-error>
+                            <span *ngIf="cadastroForm.controls['telefone'].getError('required')">
+                                Este campo é obrigatório! 
+                            </span>
+                            <span *ngIf="cadastroForm.controls['telefone'].getError('minlength')" > 
+                                Mínimo 9 números, só numeros!
+                            </span>
+                        </mat-error>
+        
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="ocupa">
+                    <mat-label>Endereço</mat-label>
+                    <input 
+                        matInput
+                        type="text" 
+                        name="endereco" 
+                        id="endereco"
+                        placeholder="Ex: Rua dos ajuadas; n° 345 "
+                        formControlName="endereco"
+                        >
+
+                        <mat-error>
+                            <span *ngIf="cadastroForm.controls['endereco'].getError('required')">
+                                Este campo é obrigatório! 
+                            </span>
+                        </mat-error>
+                        
+                    </mat-form-field>
+
+                <mat-form-field class="ocupa">
+                    <mat-label>Complemento</mat-label>
+                    <input 
+                        matInput
+                        type="text" 
+                        name="comple" 
+                        id="comple"
+                        placeholder="Ex: Logradouro das flores"
+                        formControlName="complemento"
+                        >
+                    
+                    <mat-error>
+                        <span *ngIf="cadastroForm.controls['endereco'].getError('required')">
+                            Este campo é obrigatório! 
+                        </span>
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="wrapper">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Senha</mat-label>
+                        <input
+                            matInput
+                            type="password" 
+                            name="senha" 
+                            id="senha"
+                            placeholder="Digite sua senha"
+                            formControlName="senha"
+                        >
+
+                        <mat-error>
+                            <span *ngIf="cadastroForm.controls['senha'].getError('required')">
+                                Este campo é obrigatório! 
+                            </span>
+                            <span *ngIf="cadastroForm.controls['senha'].getError('minlength')" > 
+                                No mínimo 6 caracteres!
+                            </span>
+                        </mat-error>
+    
+
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Comfirme sua senha</mat-label>
+                        <input
+                            matInput
+                            type="password" 
+                            name="confSenha" 
+                            id="confSenha"
+                            placeholder="Confirme sua senha"
+                            formControlName="comfirmaSenha"
+                        >
+
+                        <mat-error>
+                            <span *ngIf="cadastroForm.controls['comfirmaSenha'].getError('required')">
+                                Este campo é obrigatório! 
+                            </span>
+                            <span *ngIf="cadastroForm.controls['comfirmaSenha'].getError('minlength')" > 
+                                No mínimo 6 caracteres!
+                            </span>
+                        </mat-error>
+
+                    </mat-form-field>
+
+                    
+
+                </div>
+                <div class="acomodaBotao">
+
+                        <p 
+                        class="alert"
+                        *ngIf="controle"
+                        >As senhas não coincidem, tente novamente!</p>
+
+        
+                    <button
+                        mat-raised-button
+                        color="primary"
+                        type="submit"
+                        id="botao"
+                        (click)="enviaEvento($event)"
+                        [disabled]="cadastroForm.invalid"
+                        >
+        
+                        Enviar
+        
+                    </button>
+        
+                </div>
+            </form>
+        </mat-card-content>
+
+        <mat-card-actions>
+
+
+        </mat-card-actions>
+    </mat-card>
